@@ -7,6 +7,25 @@ Simplify your sharing experience with **Shrtly** today.
 
 ---
 
+## 🖼 App Screenshots (Replace Links Later)
+
+### 🏠 Home Page
+![Home Page](https://res.cloudinary.com/dk6bnw41f/image/upload/v1765258112/Screenshot_2025-12-09_105256_in3mgd.png)
+
+### 📊 Analytics Dashboard
+![Analytics](https://res.cloudinary.com/dk6bnw41f/image/upload/v1765258092/Screenshot_2025-12-09_105631_b2dtys.png)
+
+### 🔐 Login Page
+![Login](https://res.cloudinary.com/dk6bnw41f/image/upload/v1765258092/Screenshot_2025-12-09_105332_vngvlb.png)
+
+### ✍️ Register Page
+![Register](https://res.cloudinary.com/dk6bnw41f/image/upload/v1765258107/Screenshot_2025-12-09_105314_ncgnsg.png)
+
+### ✂️ URL Shortening Page
+![Shorten](https://res.cloudinary.com/dk6bnw41f/image/upload/v1765258126/Screenshot_2025-12-09_105835_xmjlli.png)
+
+---
+
 ## 🌐 Live Demo
 
 ### ✅ Frontend (Netlify)
