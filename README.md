@@ -1,8 +1,9 @@
-# 🔗 Full Stack URL Shortener
+# 🔗 Shrtly — Full Stack URL Shortener
 
-A modern **Full Stack URL Shortening Platform** built with  
-**React (Vite) + Spring Boot + JWT Security + PostgreSQL (Neon Cloud)**.  
-Users can shorten URLs, manage links, track analytics, and securely authenticate.
+**Shrtly Simplifies URL Shortening For Efficient Sharing.**  
+Shrtly streamlines the process of URL shortening, making sharing links effortless and efficient.  
+With its user-friendly interface, Shrtly allows you to generate concise, easy-to-share URLs in seconds.  
+Simplify your sharing experience with **Shrtly** today.
 
 ---
 
@@ -14,7 +15,8 @@ Users can shorten URLs, manage links, track analytics, and securely authenticate
 ### ✅ Backend (Render)
 🔗 https://url-shortener-sb-6x0h.onrender.com
 
-✅ **Database:** PostgreSQL hosted on **Neon Cloud**
+✅ **Database:** PostgreSQL hosted on **Neon Cloud**  
+✅ **Containerization:** Fully Dockerized (Frontend + Backend)
 
 ---
 
@@ -44,6 +46,10 @@ Users can shorten URLs, manage links, track analytics, and securely authenticate
 - PostgreSQL (Neon Cloud Hosted)
 - Maven
 
+### 🐳 DevOps
+- Docker
+- Docker Compose
+
 ---
 
 ## ✨ Features
@@ -58,6 +64,7 @@ Users can shorten URLs, manage links, track analytics, and securely authenticate
 ✅ API Integration using Axios  
 ✅ Role-Based Security  
 ✅ Cloud-hosted PostgreSQL Database (Neon)  
+✅ Fully Dockerized Application  
 
 ---
 
@@ -66,7 +73,8 @@ Users can shorten URLs, manage links, track analytics, and securely authenticate
 ```
 url-shortener/
 ├── url-shortener-react/   → Frontend
-└── url-shortener-sb/      → Backend
+├── url-shortener-sb/      → Backend
+└── docker-compose.yml    → Docker Setup
 ```
 
 ---
@@ -123,6 +131,19 @@ https://urshrtly.netlify.app/
 
 ---
 
+## 🐳 Run Using Docker
+
+```bash
+docker-compose up --build
+```
+
+This will start:
+- React Frontend
+- Spring Boot Backend
+- PostgreSQL (Optional local setup)
+
+---
+
 ## 🔐 JWT Authentication Flow
 
 1. User registers or logs in  
@@ -170,6 +191,11 @@ npm run build
 mvn clean package
 ```
 
+### Docker
+```bash
+docker build -t shrtly .
+```
+
 ---
 
 ## 🌍 Deployment Ready For
@@ -177,7 +203,7 @@ mvn clean package
 ✅ Netlify (Frontend)  
 ✅ Render (Backend)  
 ✅ Neon (PostgreSQL Database)  
-✅ Docker (Optional)  
+✅ Docker  
 ✅ AWS / Railway  
 
 ---
