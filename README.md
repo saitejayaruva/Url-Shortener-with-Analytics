@@ -1,6 +1,7 @@
 # 🔗 Full Stack URL Shortener
 
-A modern **Full Stack URL Shortening Platform** built with **React (Vite) + Spring Boot + JWT Security + PostgreSQL (Neon Cloud)**.  
+A modern **Full Stack URL Shortening Platform** built with  
+**React (Vite) + Spring Boot + JWT Security + PostgreSQL (Neon Cloud)**.  
 Users can shorten URLs, manage links, track analytics, and securely authenticate.
 
 ---
@@ -62,16 +63,17 @@ Users can shorten URLs, manage links, track analytics, and securely authenticate
 
 ## 📁 Project Structure
 
+```
 url-shortener/
-├── url-shortener-react/ → Frontend
-└── url-shortener-sb/ → Backend
-
+├── url-shortener-react/   → Frontend
+└── url-shortener-sb/      → Backend
+```
 
 ---
 
 ## ⚡ How to Use (Important Order)
 
-### ✅ Step 1: Start Backend First ✅
+### ✅ Step 1: Start Backend First
 
 If running locally:
 
@@ -79,123 +81,142 @@ If running locally:
 cd url-shortener-sb
 mvn clean install
 mvn spring-boot:run
----
+```
+
 Backend runs at:
 
+```
 http://localhost:8080
+```
 
-✅ For Live App:
-Render backend is already running and connected to Neon PostgreSQL:
+✅ **For Live App:**  
+Render backend is already running and connected to **Neon PostgreSQL**:
 
+```
 https://url-shortener-sb-6x0h.onrender.com
+```
 
+---
 
-✅ Step 2: Start Frontend After Backend ✅
+### ✅ Step 2: Start Frontend After Backend
 
 If running locally:
 
+```bash
 cd url-shortener-react
 npm install
 npm run dev
-
+```
 
 Frontend runs at:
 
+```
 http://localhost:5173
+```
 
-
-✅ For Live App:
+✅ **For Live App:**  
 Netlify Frontend:
 
+```
 https://urshrtly.netlify.app/
+```
 
-🔐 JWT Authentication Flow
+---
 
-User registers or logs in
+## 🔐 JWT Authentication Flow
 
-Server generates JWT token
+1. User registers or logs in  
+2. Server generates JWT token  
+3. Token stored in frontend (`localStorage`)  
+4. Token sent in headers for secured APIs  
 
-Token stored in frontend (localStorage)
+---
 
-Token sent in headers for secured APIs
+## 📊 Analytics Dashboard
 
-📊 Analytics Dashboard
+- View total URL clicks  
+- Track daily URL performance  
+- Graph-based analytics using Chart.js  
 
-View total URL clicks
+---
 
-Track daily URL performance
+## 🗄 Database Configuration
 
-Graph-based analytics using Chart.js
-
-🗄 Database Configuration
-✅ Local PostgreSQL
+### ✅ Local PostgreSQL
+```properties
 spring.datasource.url=jdbc:postgresql://localhost:5432/url_shortener
 spring.datasource.username=postgres
 spring.datasource.password=yourpassword
+```
 
-✅ Cloud PostgreSQL (Neon)
+### ✅ Cloud PostgreSQL (Neon)
+```properties
 spring.datasource.url=jdbc:postgresql://<neon-host>/<db-name>?sslmode=require
 spring.datasource.username=<neon-username>
 spring.datasource.password=<neon-password>
+```
 
-📦 Build for Production
-Frontend
+---
+
+## 📦 Build for Production
+
+### Frontend
+```bash
 npm run build
+```
 
-Backend
+### Backend
+```bash
 mvn clean package
+```
 
-🌍 Deployment Ready For
+---
 
-✅ Netlify (Frontend)
+## 🌍 Deployment Ready For
 
-✅ Render (Backend)
+✅ Netlify (Frontend)  
+✅ Render (Backend)  
+✅ Neon (PostgreSQL Database)  
+✅ Docker (Optional)  
+✅ AWS / Railway  
 
-✅ Neon (PostgreSQL Database)
+---
 
-✅ Docker (Optional)
+## 🛠 API Endpoints (Sample)
 
-✅ AWS / Railway
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| POST | `/api/auth/register` | User registration |
+| POST | `/api/auth/login` | User login |
+| POST | `/api/url/shorten` | Create short URL |
+| GET | `/api/url/{code}` | Redirect |
+| GET | `/api/url/analytics` | Dashboard analytics |
 
-🛠 API Endpoints (Sample)
-Method	Endpoint	Description
-POST	/api/auth/register	User registration
-POST	/api/auth/login	User login
-POST	/api/url/shorten	Create short URL
-GET	/api/url/{code}	Redirect
-GET	/api/url/analytics	Dashboard analytics
-🔐 Security
+---
 
-Spring Security 6+
+## 🔐 Security
 
-JWT Token Authentication
+- Spring Security 6+  
+- JWT Token Authentication  
+- Password Encryption  
+- Secured API Routes  
 
-Password Encryption
+---
 
-Secured API Routes
+## 👨‍💻 Author
 
-👨‍💻 Author
+**Saiteja Yaruva**  
+Full Stack Developer | Java | Spring Boot | React  
+📍 India  
 
-Saiteja Yaruva
-Full Stack Developer | Java | Spring Boot | React
-📍 India
+---
 
-⭐ Support This Project
+## ⭐ Support This Project
 
-If you found this useful, please give it a ⭐ on GitHub — it motivates me to build more open-source projects!
+If you found this useful, please **give it a ⭐ on GitHub** — it motivates me to build more open-source projects!
 
-📝 License
+---
 
-This project is licensed under the MIT License.
+## 📝 License
 
-
-
-
-If you want, I can now also add:
-
-✅ Architecture Diagram  
-✅ Screenshots Section  
-✅ Swagger UI Guide  
-✅ CI/CD + Docker Setup  
-
-Say the word and I’ll level this repo up to **enterprise-grade presentation** 🚀
+This project is licensed under the **MIT License**.
